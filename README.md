@@ -39,7 +39,7 @@ The showcase displays all your theme colors organized into categories:
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/theme-color-showcase.git
+git clone https://github.com/R-nasPT/theme-lab.git
 
 # Navigate to the project
 cd theme-lab
