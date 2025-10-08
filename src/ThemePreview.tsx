@@ -27,6 +27,7 @@ export default function ThemePreview() {
       name: "destructive",
       class: "bg-destructive text-destructive-foreground",
     },
+    { name: "warning", class: "bg-warning text-warning-foreground" },
   ];
 
   const sidebarColors = [
@@ -113,7 +114,7 @@ export default function ThemePreview() {
             <div className="h-1 w-12 bg-gradient-to-r from-secondary to-destructive rounded-full"></div>
             <h2 className="text-2xl font-bold">Primary / Secondary / Accent</h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {accentColors.map((c, i) => (
               <div
                 key={c.name}
@@ -136,7 +137,7 @@ export default function ThemePreview() {
             <div className="h-1 w-12 bg-gradient-to-r from-accent to-muted rounded-full"></div>
             <h2 className="text-2xl font-bold">Sidebar Colors</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-6">
             {sidebarColors.map((c, i) => (
               <div
                 key={c.name}
