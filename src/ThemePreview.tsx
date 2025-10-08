@@ -23,7 +23,10 @@ export default function ThemePreview() {
     { name: "secondary", class: "bg-secondary text-secondary-foreground" },
     { name: "accent", class: "bg-accent text-accent-foreground" },
     { name: "muted", class: "bg-muted text-muted-foreground" },
-    { name: "destructive", class: "bg-destructive text-destructive-foreground" },
+    {
+      name: "destructive",
+      class: "bg-destructive text-destructive-foreground",
+    },
   ];
 
   const sidebarColors = [
@@ -36,6 +39,8 @@ export default function ThemePreview() {
       name: "sidebar-accent",
       class: "bg-sidebar-accent text-sidebar-accent-foreground",
     },
+    { name: "sidebar-border", class: "bg-sidebar-border text-foreground" },
+    { name: "sidebar-ring", class: "bg-sidebar-ring text-background" },
   ];
 
   const chartColors = [
@@ -65,7 +70,8 @@ export default function ThemePreview() {
                 🎨 Theme Color Showcase
               </h1>
               <p className="text-muted-foreground text-sm sm:text-base">
-                ✨ Light & Dark mode preview + Radius styles for your design system
+                ✨ Light & Dark mode preview + Radius styles for your design
+                system
               </p>
             </div>
 
@@ -180,7 +186,9 @@ export default function ThemePreview() {
                 className={`group relative bg-primary text-primary-foreground w-36 h-36 flex flex-col items-center justify-center shadow-2xl hover:shadow-primary/50 hover:scale-110 transition-all duration-500 ${r.class} overflow-hidden`}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-accent/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <span className="relative text-xs font-bold mb-2">{r.name}</span>
+                <span className="relative text-xs font-bold mb-2">
+                  {r.name}
+                </span>
                 <span className="relative text-3xl">⬜</span>
               </div>
             ))}
@@ -196,12 +204,14 @@ export default function ThemePreview() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="group relative rounded-3xl p-8 shadow-2xl bg-primary text-primary-foreground hover:scale-105 transition-all duration-300 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <h3 className="relative font-bold text-xl mb-3">Test Playground</h3>
+              <h3 className="relative font-bold text-xl mb-3">
+                Test Playground
+              </h3>
               <p className="relative text-sm opacity-90">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               </p>
             </div>
-            
+
             <div className="group relative rounded-3xl bg-card text-card-foreground p-8 shadow-2xl border-2 border-border/50 hover:scale-105 hover:border-primary/50 transition-all duration-300 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <h3 className="relative font-bold text-xl mb-3">Card</h3>
@@ -221,7 +231,9 @@ export default function ThemePreview() {
             <div className="group relative rounded-3xl bg-destructive text-destructive-foreground p-8 shadow-2xl hover:scale-105 transition-all duration-300 overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-tl from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <h3 className="relative font-bold text-xl mb-3">Destructive</h3>
-              <p className="relative text-sm opacity-90">bg-destructive example</p>
+              <p className="relative text-sm opacity-90">
+                bg-destructive example
+              </p>
             </div>
           </div>
         </section>
@@ -229,7 +241,11 @@ export default function ThemePreview() {
         {/* Footer */}
         <footer className="relative rounded-2xl bg-card/50 backdrop-blur border border-border/30 p-8 text-center">
           <p className="text-muted-foreground text-sm mb-2">
-            Toggle <code className="px-2 py-1 rounded bg-muted text-muted-foreground font-mono text-xs">.dark</code> class on body to preview dark mode 🌙
+            Toggle{" "}
+            <code className="px-2 py-1 rounded bg-muted text-muted-foreground font-mono text-xs">
+              .dark
+            </code>{" "}
+            class on body to preview dark mode 🌙
           </p>
           <p className="text-xs text-muted-foreground/70">
             ✨ Perfect for testing theme colors before deploying to production
